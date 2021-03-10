@@ -50,6 +50,11 @@ async def on_message(message):
 		data = getBTC()
 		await message.channel.send('Current $BTC price is: ' + data[0] + '.' + '(' + data[1] + data[2] +')')
 
+	# This next one doesnt work, it triggers on EVERYTHING, even 'asjdhfakljshdf'
+	#if 'btc' or 'bitcoin' in message.content.lower():
+	#	data = getBTC()
+	#	await message.channel.send('Current $BTC price is: ' + data[0] + '.' + '(' + data[2] + ')')
+	
 	#if 'page_html' in message.content.lower():
 	#	data = getBTC()
 	#	await message.channel.send(data[3])
