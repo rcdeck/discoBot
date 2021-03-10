@@ -7,7 +7,10 @@ my_url = "https://coinmarketcap.com/currencies/bitcoin/"
 client = discord.Client()
 
 def getBTC():
-  # opening up connection, grabbing the page
+	# cleaning urllib cache
+	urllib.urlcleanup()
+  	
+	# opening up connection, grabbing the page
 	uClient = uReq(my_url)
 	print('client opened')
 
